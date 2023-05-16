@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  :root{
+    font-size: 62.5%;
+    --cor1: #ff2828;
+    --cor2: #ff8928;
+    --cor3: #f5cd2c;
+  }
+  
+  body{
+    background-color: rgb(247 247 247);
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "t-body t-body t-body"
+    "main main aside"
+    "section section section"
+    "sugestao sugestao sugestao"
+    "footer footer footer";
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+  }
+  
+  header{
+    grid-area: header;
+    width: 100%;
+  }
+  
+  #text-body{
+    display: flex;
+    grid-area: t-body;
+    background-color: #ff3131;
+    width: 80%;
+    height: 35rem;
+    margin: -7rem auto 3rem;
+    border-radius: 0px 0px 50rem 2rem;
+    border: solid 4px black;
+    z-index: -1;
+  }
+  
+  main{
+    background-color: white;
+    grid-area: main;
+    width: 98%;
+    height: 48rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px black;
+    margin: auto;
+  }
+  
+  aside{
+    grid-area: aside;
+    width: 98%;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px black;
+  }
+  
+  #Destaques{
+    grid-area: section;
+    background-color: var(--cor2);
+    border-radius: 8px;
+    width: 98%;
+    height: 22rem;
+    text-align: center;
+    box-shadow: 0px 0px 5px black;
+    margin: auto;
+  }
+  
+  footer{
+    background-color: black;
+    grid-area: footer;
+    height: 10rem;
+    color: #ebdbdb;
+  }
+  
+  /* Navegação TOPO */
+  
+  nav {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 7px black;
+    display: flex;  
+    flex-direction: row;
+  }
+    
+  nav img{
+    width: 15rem;
+    height: auto;
+    margin-left: 2rem;
+    border: transparent 1px solid;
+    border-radius: 50%;
+    box-shadow: 0px 10px 200px transparent;
+  
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  nav img:hover{
+    width: 18rem;
+    border: #f5cd2c 3px solid;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px rgb(255, 40, 40);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    flex-basis: 100vw;
+  }
+  
+  nav li {
+    padding: 4rem;
+    transition: all 0.3s ease;
+  }
+  
+  nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Secular One', sans-serif;
+    box-shadow: 0px 0px 50px transparent;
+  
+    transition: all 0.3s ease;
+  }
+    
+  nav li a:hover {
+    color: #f5c42c;
+    text-decoration: underline;
+    border: #f5c42c solid 2px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px rgb(255, 137, 40);
+  }
+  
+  /* Boas Vindas */
+  
+  #text-body p{
+    font-size: 3rem;
+    font-family: 'IM Fell DW Pica';
+    text-align: inherit;
+    width: 65rem;
+    margin-top: 12rem;
+    margin-left: 3rem;
+  }
+  
+  #text-body img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    border: solid 4px black;
+    margin: 7rem auto auto;
+  }
+  
+  /* Menu */
+  
+  main {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  main h2{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    width: 22rem;
+    color: white;
+    text-align: center;
+    padding: 15rem 0 0;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(121,9,9,1) 57%, rgba(255,166,0,1) 100%);
+    border-radius: 8px 0px 0px 8px;
+  }
+  
+  main h2 span{
+    color: var(--cor1);
+  }
+  
+  main ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+  
+  .product-card{
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center ;
+    align-self: center;
+    
+    width: 14rem;
+    height: 30rem;
+    margin: auto;
+    background-color: #dfdfdf;
+    border-radius: 2.5rem .2rem;
+    opacity: 0.6;
+  
+    transition: all 0.2s ease;
+  }
+  
+  .product-card:hover{
+    opacity: 1;
+    box-shadow: 10px 10px 0px orangered;
+  }
+  
+  .product-card h3{
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    font-family: 'Secular One', sans-serif;
+  }
+  
+  .img_rate{
+    width: 7.5rem;
+  }
+  
+  .img_game{
+    width: 12rem;
+    height: auto;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.414);
+  }
+  
+  .product-card p {
+    font-size: 1.5rem;
+    font-family: arvo;
+    margin: 1.5rem auto auto;
+    align-self: end;
+  }
+  
+  /* Aside */
+  
+  aside h2{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(255, 166, 0);
+    text-align: center;
+    padding: 2rem;
+    background-color: #0f0c0b;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  aside ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  aside li{
+    margin: 2rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: arvo;
+    border-left: 0.2rem solid black;
+    list-style: none;
+    padding-left: 5px;
+  }
+  
+  aside li span{
+    color: var(--cor2);
+    font-weight: bold;
+  }
+  
+  aside p{
+    margin: 2rem 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: arvo;
+    list-style: none;
+    padding-left: 5px;
+    color:  var(--cor2);
+    font-weight: bold;
+  }
+  
+  
+  /* Destaques */
+  
+  #Destaques h2{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--cor2);
+    text-align: center;
+    padding: 2rem;
+    background-color: #0f0c0b;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  #Destaques ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0;
+  }
+  
+  #Destaques ul div{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 2rem;
+  }
+  
+  #Destaques li{
+    list-style: none;
+  }
+  
+  #Cards-link{
+    font-size: 4rem;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Jacques Francois Shadow', cursive;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: #000;
+  }
+  
+  #Casual-link{
+    font-size: 4rem;
+    text-decoration: none;
+    color: transparent;
+    font-family: 'Shrikhand', cursive;
+    font-weight: 100;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+  }
+  
+  #Classicos-link{
+    font-size: 4rem;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Kurale', serif;
+  }
+  
+  #RPG-link{
+    font-size: 5rem;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Bigelow Rules', cursive;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: #000;
+  }
+  
+  
+  
+  #Destaques ul img{
+    width: 7rem;
+    margin: auto;
+  }
+  
+  /* Sugestões */
+  
+  #Sugestoes{
+    grid-area: sugestao;
+    display: flex;
+    background-color: rgb(233, 222, 255);
+    border-radius: 8px;
+    width: 80%;
+    height: 35rem;
+    text-align: center;
+    box-shadow: 0px 0px 5px black;
+    margin: 1rem auto 1rem;
+    z-index: 1;  
+  }
+  
+  #Sugestoes #tittle-sugestao{
+    width: 22rem;
+    background-color: blueviolet;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #Sugestoes h2{
+    font-size: 4rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    padding-top: 1.5rem;
+    z-index: 1;
+    position: relative;
+  }
+  
+  #joker{
+    width: 23rem;
+    rotate: -10deg;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    z-index: 1;
+    position: relative;
+  
+    transition: all 0.3s ease;
+  }
+  
+  #joker-black{
+    width: 23rem;
+    rotate: -10deg;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    filter: brightness(0%);
+    z-index: 0;
+    position: absolute;
+    left: 2rem;
+    top: 7.5rem;
+  
+    transition: all 0.3s ease;
+  }
+  
+  #joker:hover + #joker-black{
+    width: 25rem;
+  
+    margin-top: 1.5rem;
+    margin-left: -1.5rem;
+    rotate: -6deg;
+  }
+  
+  #joker:hover{
+    width: 25rem;
+    rotate: -7deg;
+  }
+  
+  #Sugestoes #content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin: auto;
+  }
+  
+  #content-container p{
+    font-size: 2rem;
+    font-family: arvo;
+    width: 85%;
+    margin: auto;
+  }
+  
+  #content-container form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #content-container form label{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+  }
+  
+  #content-container form textarea{
+    width: 50rem;
+    height: 9rem;
+    outline-color: black;
+    border-radius: 8px 8px 0 0;
+    resize: none;
+    padding: 1rem;
+  }
+  
+  #content-container form button{
+    padding: 5px;
+    outline: none;
+    border: black 2px solid;
+    border-radius: 5px;
+    width: 20rem;
+    background-color: mediumpurple;
+    margin: .5rem auto auto;
+    color: #000000;
+  }
+  
+  .submit_icon{
+    color: #000000;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    margin-top: 5.8rem;
+    margin-left: 34.8rem;   
+  }
+  
+  footer address{
+    margin: 3.5rem 2rem auto;
+    font-size: 1.5rem;
+  }
+  
